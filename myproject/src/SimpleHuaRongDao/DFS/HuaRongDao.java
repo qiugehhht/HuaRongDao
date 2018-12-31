@@ -63,28 +63,28 @@ public class HuaRongDao {
     private void move(int direction) {
         int temp;
         switch (direction) {
-            // 空格和左侧数字交换
+            // space switch with left
             case LEFT:
                 temp = arr[x][y - 1];
                 arr[x][y - 1] = 0;
                 arr[x][y] = temp;
                 y = y - 1;
                 break;
-            // 空格和右侧数字交换
+            // space switch with right
             case RIGHT:
                 temp = arr[x][y + 1];
                 arr[x][y + 1] = 0;
                 arr[x][y] = temp;
                 y = y + 1;
                 break;
-            // 空格和上方数字交换
+            // space switch with up
             case UP:
                 temp = arr[x - 1][y];
                 arr[x - 1][y] = 0;
                 arr[x][y] = temp;
                 x = x - 1;
                 break;
-            // 空格和下方数字交换
+            // space swich with down
             case DOWN:
                 temp = arr[x + 1][y];
                 arr[x + 1][y] = 0;
@@ -92,7 +92,7 @@ public class HuaRongDao {
                 x = x + 1;
                 break;
         }
-        // 该方向记录
+        // records
         moveArr.add(direction);
     }
 
@@ -101,28 +101,28 @@ public class HuaRongDao {
     private void moveBack(int direction) {
         int temp;
         switch (direction) {
-            // 空格和左侧数字交换
+            // space switch with left
             case LEFT:
                 temp = arr[x][y + 1];
                 arr[x][y + 1] = 0;
                 arr[x][y] = temp;
                 y = y + 1;
                 break;
-            // 空格和右侧数字交换
+            // space switch with right
             case RIGHT:
                 temp = arr[x][y - 1];
                 arr[x][y - 1] = 0;
                 arr[x][y] = temp;
                 y = y - 1;
                 break;
-            // 空格和上方数字交换
+            // space switch with up
             case UP:
                 temp = arr[x + 1][y];
                 arr[x + 1][y] = 0;
                 arr[x][y] = temp;
                 x = x + 1;
                 break;
-            // 空格和下方数字交换
+            // space switch with down
             case DOWN:
                 temp = arr[x - 1][y];
                 arr[x - 1][y] = 0;
@@ -130,7 +130,7 @@ public class HuaRongDao {
                 x = x - 1;
                 break;
         }
-        // 记录的移动步骤出栈
+        // record out of stack
         moveArr.remove(moveArr.size() - 1);
     }
 
