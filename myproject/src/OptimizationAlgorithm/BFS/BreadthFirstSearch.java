@@ -93,7 +93,7 @@ public class BreadthFirstSearch {
         }
     }
 
-    // get the maximum award
+    // get the maximum award 
     public int getMaxAward(int[][] matrix) {
         // initialize
         M = matrix.length;
@@ -107,7 +107,7 @@ public class BreadthFirstSearch {
         return bestItem.value;
     }
 
-    // print the best path
+    // print the best path 
     public void printBestPath() {
         List<Integer> dirList = new ArrayList<Integer>();
         SearchItem curSearchItem = bestItem;
